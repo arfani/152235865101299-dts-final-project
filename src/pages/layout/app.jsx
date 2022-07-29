@@ -1,9 +1,13 @@
 import { Outlet } from "react-router-dom";
+import {useAuthState} from "react-firebase-hooks/auth"
+import {auth} from "../../config/firebase"
 
-export default function layout() {
+export default function() {
+    const [user, isLoading] = useAuthState(auth)
+    
     return(
         <>
-            Welcome ...
+            Welcome {user?.email}...
 
             <Outlet />
         </>
