@@ -35,9 +35,9 @@ export default function Main() {
                     </div>
                     <div className="font-courgette text-xs mt-2 text-blue-50">{jadwalSholat.jadwal?.tanggal}</div>
                 </div>
-                <div className="mt-4 flex text-center">
+                <div className="mt-2 flex w-full justify-around flex-wrap">
                     <CardItemSholat pukul={jadwalSholat.jadwal?.subuh} waktu='Subuh' />
-                    <CardItemSholat pukul={jadwalSholat.jadwal?.terbit} waktu='Terbit' />
+                    <CardItemSholat pukul={jadwalSholat.jadwal?.terbit} waktu='Terbit' isHover={false} onMouseClick={() => console.log('clicked')} />
                     <CardItemSholat pukul={jadwalSholat.jadwal?.dzuhur} waktu='Dzuhur' />
                     <CardItemSholat pukul={jadwalSholat.jadwal?.ashar} waktu='Ashar' />
                     <CardItemSholat pukul={jadwalSholat.jadwal?.maghrib} waktu='Maghrib' />
