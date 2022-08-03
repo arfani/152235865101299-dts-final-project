@@ -1,10 +1,12 @@
+import { useEffect, useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons"
-import { useEffect, useState } from "react"
+import { faGoogle } from "@fortawesome/free-brands-svg-icons"
 
 import {
     registerUser,
-    loginUser
+    logInUser,
+    signInGoogle,
 } from "../config/firebase"
 
 export default function ({ mode }) {
@@ -24,10 +26,15 @@ export default function ({ mode }) {
     const loginHandler = (e) => {
         e.preventDefault()
         if(mode === "login"){
-            loginUser(user.email, user.password)
+            logInUser(user.email, user.password)
         }else{
             registerUser(user.email, user.password)
         }
+    }
+
+    const loginGoogleHandler = (e) => {
+        e.preventDefault()
+        signInGoogle()
     }
 
     useEffect(
@@ -51,8 +58,9 @@ export default function ({ mode }) {
                             <label htmlFor="password">Password</label>
                             <input className="block w-full rounded p-1" type="password" name="password" value={user.password} onChange={inputOnChangeHandler} />
                         </div>
-                        <div className="flex justify-end">
-                            <button onClick={loginHandler} className="bg-blue-500 hover:bg-blue-600 hover:text-blue-100 font-semibold rounded px-4 py-1">{mode === 'login' ? 'Login' : 'Register'} <FontAwesomeIcon icon={faPaperPlane} /></button>
+                        <div className="flex items-end flex-col">
+                            <button onClick={loginHandler} className="bg-blue-500 hover:bg-blue-600 hover:text-blue-100 font-semibold rounded px-4 py-1 w-fit text-white">{mode === 'login' ? 'Login' : 'Register'} <FontAwesomeIcon icon={faPaperPlane} /></button>
+                            {mode === 'login' && <button onClick={loginGoogleHandler} className="bg-blue-500 hover:bg-blue-600 hover:text-blue-100 font-semibold rounded px-4 py-1 w-fit mt-2">Login Google <FontAwesomeIcon icon={faGoogle} /></button>}
                         </div>
                     </form>
                 </div>

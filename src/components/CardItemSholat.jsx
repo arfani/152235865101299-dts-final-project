@@ -18,7 +18,7 @@ export default function CardItemSholat({ waktu, pukul, className }) {
             onMouseLeave={() => setIsHover(!isHover)}
         >
             <h2 className={waktuStyle}>{waktu}</h2>
-            <div className="font-coustard text-5xl p-3">{pukul}</div>
+            <div className="font-coustard text-4xl p-3">{pukul}</div>
         </div>
     )
 }

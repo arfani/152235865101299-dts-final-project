@@ -9,7 +9,8 @@ import {
   Register,
   Layout,
   About,
-  Contact
+  Contact,
+  MainPage
 } from './pages';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,6 +19,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
+          <Route index element={<MainPage />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
         </Route>
