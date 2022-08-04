@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons"
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 import {
     registerUser,
@@ -13,6 +14,8 @@ export default function ({ mode }) {
         email: "",
         password: ""
     })
+
+    const navigate = useNavigate();
 
     const inputOnChangeHandler = (e) => {
         setUser({
@@ -28,6 +31,7 @@ export default function ({ mode }) {
         }else{
             registerUser(user.email, user.password)
         }
+        navigate("/")
     }
 
     useEffect(
