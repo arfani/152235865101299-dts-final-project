@@ -9,7 +9,7 @@ import {
   Register,
   Layout,
   About,
-  Contact,
+  Quran,
   MainPage
 } from './pages';
 
@@ -20,8 +20,9 @@ root.render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
+
           <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="quran" element={<Quran />} />
         </Route>
         <Route path='login' element={<Login />} />
         <Route path='register' element={<Register />} />

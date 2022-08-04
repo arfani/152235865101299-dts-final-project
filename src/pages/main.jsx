@@ -52,7 +52,7 @@ export default function Main() {
                     <CardItemSholat pukul={jadwalSholat.jadwal?.isya} waktu='Isya' />
                 </div>
                 <div className="mt-6">
-                    <p>Hii <b>{user?.displayName.split(" ")[0]}</b>, sambil tunggu waktu sholat yuk <Link to="about" className="bg-teal-800 rounded-tr-full rounded-br-full py-1 pl-2 pr-3 text-yellow-200 font-semibold ml-1 transition-transform inline-block hover:translate-x-1">Baca Al Qur'an</Link></p>
+                    <p>Hii <b>{user?.displayName.split(" ")[0]}</b>, sambil tunggu waktu sholat yuk <Link to="quran" className="bg-teal-800 rounded-tr-full rounded-br-full py-1 pl-2 pr-3 text-yellow-200 font-semibold ml-1 transition-transform inline-block hover:translate-x-1">Baca Al Qur'an</Link></p>
                 </div>
             </div>
         </main>

@@ -1,7 +1,7 @@
-export default function about(){
+export default function about() {
     return (
         <>
-        About Page
+            <p>Aplikasi ini dibangun untuk menyelesaikan Final Project dari pelatihan Reactjs di DTS Kominfo.</p>
         </>
     )
 }

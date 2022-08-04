@@ -9,7 +9,6 @@ export default function() {
     return(
         <div className="px-4 md:px-6">
             <Nav />
-            Welcome {user?.email}...
 
             <Outlet />
         </div>

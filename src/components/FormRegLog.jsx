@@ -3,11 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons"
 import { useNavigate } from "react-router-dom"
 import { faGoogle } from "@fortawesome/free-brands-svg-icons"
+import { useAuthState } from "react-firebase-hooks/auth"
 
 import {
     registerUser,
     logInUser,
     signInGoogle,
+    auth,
 } from "../config/firebase"
 
 export default function ({ mode }) {
@@ -41,10 +43,15 @@ export default function ({ mode }) {
         signInGoogle()
     }
 
-    useEffect(
-        () => {
-            console.log(user);
-        }, [user]
+    const [userExist, isLoading] = useAuthState(auth)
+    
+    useEffect(() => {
+        if(userExist){
+            navigate("/")
+        }if(isLoading){
+            return
+        }
+        }
     )
 
     return (

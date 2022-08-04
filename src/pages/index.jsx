@@ -3,7 +3,7 @@ import MainPage from './main'
 import Login from './login'
 import Register from './register'
 import About from './about'
-import Contact from './contact'
+import Quran from './Quran'
 
 export {
     Layout,
@@ -11,5 +11,5 @@ export {
     Login,
     Register,
     About,
-    Contact,
+    Quran,
 }
