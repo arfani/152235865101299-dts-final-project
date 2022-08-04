@@ -12,7 +12,7 @@ import {
     auth,
 } from "../config/firebase"
 
-export default function ({ mode }) {
+export default function FormRegLog({ mode }) {
 
     const [user, setUser] = useState({
         email: "",

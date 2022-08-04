@@ -19,11 +19,10 @@ export default function Main() {
             jadwalSholatPerHari.then(({ data }) => {
                 setJadwalSholat(data.data)
             })
-
         } catch (error) {
             console.log(error);
         }
-    }, []
+    }, [currentDateFormatted]
     )
 
     return (

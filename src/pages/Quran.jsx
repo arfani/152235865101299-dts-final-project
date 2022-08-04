@@ -13,7 +13,7 @@ export default function Quran() {
             })
 
         console.log(quran)
-    }, [])
+    }, [quran])
 
 
     return (

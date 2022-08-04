@@ -4,7 +4,7 @@ import { auth } from "../../config/firebase"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { Link } from "react-router-dom"
 
-export default function (props) {
+export default function Nav(props) {
     const [userTogle, setUserTogle] = useState(false)
     const [user] = useAuthState(auth)
 
