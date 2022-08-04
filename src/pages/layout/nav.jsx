@@ -1,5 +1,5 @@
 import classNames from "classnames"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { auth } from "../../config/firebase"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { Link } from "react-router-dom"

@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import CardItemSholat from "../components/CardItemSholat"
-import { auth, getCredential } from "../config/firebase"
+import { auth } from "../config/firebase"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { Link } from "react-router-dom"
 
