@@ -1,6 +1,6 @@
 import FormRegLog from "../components/FormRegLog"
 
-export default function register(){
+export default function Register(){
     return (
         <>
         <FormRegLog />
